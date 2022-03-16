@@ -6,13 +6,15 @@
     --background-color: #f6f7fb;
     --dark-color: #333;
     --grey-color: #83919C;
-    --main-one: #8BCCEC;
-    --main-two: #EF97B4;
-    --light-one: #EF97B4;
-    --light-two: #CBE5F1;
+    --main: #EF97B4;
+    --light-accent-one: #FFDAE9;
+    --light-accent-two: #8BCCEC;
+    --dark-accent-one: #eb7ca1;
+    --dark-accent-two: #52b2e2;
+    --light-color: white;
 }
 
-/* General */
+/* General Styles */
 *, *::before, *::after{
     margin: 0;
     padding:0;
@@ -35,7 +37,6 @@ img {
     width: 100%;
 }
 
-
 .container {
     position: relative;
     z-index: 5;
@@ -44,7 +45,29 @@ img {
     padding: 0 4rem;
 }
 
-/* Header */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    font-size: 1.25rem;
+    color: var(--dark-color);
+    line-height: 1.5;
+}
+
+
+.column-1 {
+    margin-right: 1.5rem;
+}
+
+.column-2{
+    margin-left: 1.5rem;
+}
+
+/* Header Styles */
 
 header {
     width: 100%;
@@ -61,10 +84,88 @@ nav {
 nav .container {
     display: flex;
     justify-content: space-between;
+    height: 6rem;
+    align-items: center;
 }
 
 .logo {
     width: 200px;
     display: flex; 
     align-items: center;
+}
+
+.links ul{
+    display: flex;
+}
+
+.links a {
+    display: inline-block;
+    padding: 0.9rem 1.2rem;
+    color: var(--dark-color);
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1;
+    transition: 0.3s;
+}
+
+.links a.active {
+    background-color: var(--main);
+    color: var(--background-color);
+    border-radius: 2rem;
+    font-size: 1rem;
+    padding: .9rem 2.1rem;
+    margin-left: 1rem;
+}
+
+.links a:hover {
+    color: var(--main);
+}
+
+.links a.active:hover {
+    color: var(--light-color);
+    background-color: var(--dark-accent-one);
+}
+
+.header-content .container.grid-2 {
+    grid-template-columns: 2.5fr 3.5fr;
+    min-height: calc(100vh - 6rem);
+    padding-bottom: 2.5rem;
+    text-align: left;
+}
+
+.header-title {
+    font-size: 3.8rem;
+    line-height: .7;
+    color: var(--dark-color);
+}
+
+.header-content .text {
+    margin: 2.15rem 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: .85rem 2rem;
+    background-color: var(--main);
+    color: var(--light-color);
+    border-radius: 2rem;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--dark-accent-one);
+}
+
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-content .image .img-element {
+    max-width: 750px;
 }
