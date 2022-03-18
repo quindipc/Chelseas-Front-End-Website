@@ -444,7 +444,7 @@ nav.open .links {
     left: 0;
     z-index: 2;
     color: var(--light-color);
-    background-color: rgba(255, 218, 233, 0.40);
+    background-color: rgba(214, 156, 179, 0.7);
     display: flex;
     flex-direction: column;
     align-items: center;

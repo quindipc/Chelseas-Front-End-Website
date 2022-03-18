@@ -1,0 +1,70 @@
+.back-btn-wrap {
+    position: relative;
+}
+
+.back-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 55px;
+    width: 55px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    color: var(--background-color);
+    font-size: 1.2rem;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+    position: relative;
+    z-index: 2;
+}
+
+.back-btn:hover {
+    background-color: var(--light-accent-one);
+}
+
+.back-btn-wrap:before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: var(--light-color);
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    border-radius: 50%;
+    opacity: 0.08;
+    animation: scale 1.2s ease-out infinite 1s;
+}
+
+
+.back-btn-wrap {
+    margin-left: 1.3rem;
+  }
+
+  .back-btn {
+    width: 43px;
+    height: 43px;
+    font-size: 0.9rem;
+  }
+
+  .back-btn-wrap:before {
+    width: 45px;
+    height: 45px;
+  }
+
+
+
+  <div class="back-btn-wrap">
+  <a href="#" class="back-btn">
+      <i class="fas fa-chevron-up"></i>
+  </a>
+</div>
+
+
+<div class="back-btn-wrap">
+<a href="#" class="back-btn">
+    <i class="fas fa-chevron-up"></i>
+</a>
+</div>
+</div>
